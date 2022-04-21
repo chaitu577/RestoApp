@@ -28,7 +28,7 @@ function Home(props) {
     }, []);
 
     const getItems = async () => {
-        await fetch("https://uin25qovaj.execute-api.us-east-2.amazonaws.com/prod/menu")
+        await fetch("https://0ob4ux1xd6.execute-api.us-east-1.amazonaws.com/BetaTest/")
         .then(getResp => getResp.json())
         .then(getResp => {
             setMenuItems(getResp);
@@ -36,7 +36,7 @@ function Home(props) {
     }
 
     const postItem = async (item) => {
-        await fetch("https://uin25qovaj.execute-api.us-east-2.amazonaws.com/prod/menu", {
+        await fetch("https://0ob4ux1xd6.execute-api.us-east-1.amazonaws.com/BetaTest/", {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             mode: 'no-cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -64,7 +64,7 @@ function Home(props) {
         await postItem(item);
     }
     const deleteItem = async (item) => {
-        await fetch("https://uin25qovaj.execute-api.us-east-2.amazonaws.com/prod/menu/" + item.id, {
+        await fetch("https://0ob4ux1xd6.execute-api.us-east-1.amazonaws.com/BetaTest/" + item.id, {
             method: 'DELETE', // *GET, POST, PUT, DELETE, etc.
           })
         .then(res => {
