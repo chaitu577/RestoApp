@@ -27,7 +27,7 @@ function Login(props) {
             console.log(res);
             if(res.authenticated) {
               setError('');
-              sessionStorage.setItem('userDetails', JSON.stringify(res.userDetails));
+              //sessionStorage.setItem('userDetails', JSON.stringify(res.userDetails));
               props.history.push('/home');
             } else {
               setError('Username/Password is invalid');
