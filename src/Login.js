@@ -22,7 +22,7 @@ function Login(props) {
             referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
             body: JSON.stringify({username: username.value, password: password.value}) // body data type must match "Content-Type" header
           })
-        .then(res => res.json())
+        .then(res => props.history.push('/home'))
         .then(res => {
             console.log(res);
             if(res.authenticated) {
