@@ -15,7 +15,8 @@ function Login(props) {
             credentials: 'same-origin', // include, *same-origin, omit
             headers: {
               'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': '*'
+              'Access-Control-Allow-Origin': 'https://50bfb2i7x4.execute-api.us-east-1.amazonaws.com',
+             'Access-Control-Allow-Credentials': true
               // 'Content-Type': 'application/x-www-form-urlencoded',
             },
             redirect: 'follow', // manual, *follow, error
