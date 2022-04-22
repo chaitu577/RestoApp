@@ -9,14 +9,13 @@ function Login(props) {
   // handle button click of login form
   const handleLogin = async () => {
     await fetch("https://50bfb2i7x4.execute-api.us-east-1.amazonaws.com/auth/", {
-            method: 'POST,OPTIONS', // *GET, POST, PUT, DELETE, etc.
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
             mode: 'no-cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
             credentials: 'same-origin', // include, *same-origin, omit
             headers: {
               'Content-Type': 'application/json',
               'Access-Control-Allow-Origin': '*',
-             'Access-Control-Allow-Methods': "OPTIONS,POST,GET"
               // 'Content-Type': 'application/x-www-form-urlencoded',
             },
             redirect: 'follow', // manual, *follow, error
